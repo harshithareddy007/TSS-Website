@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 export default function Navbar() {
@@ -19,18 +20,24 @@ export default function Navbar() {
 
           {/* CENTER: Nav links */}
           <nav className="hidden md:flex gap-8 text-sm font-medium text-gray-700">
-            <a className="hover:text-orange-500 transition" href="#">
-              Home
-            </a>
-            <a className="hover:text-orange-500 transition" href="#">
-              About
-            </a>
-            <a className="hover:text-orange-500 transition" href="#">
-              Opportunities
-            </a>
-            <a className="hover:text-orange-500 transition" href="#">
-              Contact
-            </a>
+            <div className="flex gap-6 text-gray-700 font-medium">
+              
+              <Link to="/" className="text-gray-700 hover:text-orange-500 transition font-medium">
+                Home
+              </Link>
+
+              <Link to="/about" className="text-gray-700 hover:text-orange-500 transition font-medium">
+                About
+              </Link>
+
+              <Link to="/opportunities" className="text-gray-700 hover:text-orange-500 transition font-medium">
+                Opportunities
+              </Link>
+
+              <Link to="/contact" className="text-gray-700 hover:text-orange-500 transition font-medium">
+                Contact
+              </Link>
+            </div>
           </nav>
 
           {/* RIGHT: Auth buttons */}

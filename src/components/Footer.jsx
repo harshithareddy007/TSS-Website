@@ -1,80 +1,100 @@
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-400">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        {/* GRID */}
-        <div className="grid gap-12 md:grid-cols-4">
-          {/* BRAND */}
-          <div>
-            <h3 className="text-white text-lg font-semibold mb-4">
-              <span className="text-orange-500">The</span> Student Spot
-            </h3>
+    <footer className="bg-black text-gray-300">
+      
+      {/* ORANGE ACCENT LINE */}
+      <div className="h-[2px] bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
 
-            <p className="text-sm leading-relaxed">
-              Empowering students with real skills, mentorship, and
-              career-ready opportunities.
-            </p>
-          </div>
+      <div className="max-w-7xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-4">
+        
+        {/* BRAND */}
+        <div>
+          <h3 className="text-xl font-bold text-orange-500">
+            The Student Spot
+          </h3>
 
-          {/* LINKS */}
-          <div>
-            <h4 className="text-white text-sm font-semibold mb-4">
-              Explore
-            </h4>
-            <ul className="space-y-2 text-sm">
-              {["Home", "About", "Opportunities", "Contact"].map((item) => (
-                <li
-                  key={item}
-                  className="hover:text-orange-500 transition cursor-pointer"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <p className="mt-4 text-sm leading-relaxed text-gray-400">
+            Empowering students with real skills, mentorship, and
+            career-ready opportunities.
+          </p>
+        </div>
 
-          {/* RESOURCES */}
-          <div>
-            <h4 className="text-white text-sm font-semibold mb-4">
-              Resources
-            </h4>
-            <ul className="space-y-2 text-sm">
-              {["Privacy Policy", "Terms & Conditions", "Community"].map(
-                (item) => (
-                  <li
-                    key={item}
-                    className="hover:text-orange-500 transition cursor-pointer"
-                  >
-                    {item}
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
+        {/* EXPLORE */}
+        <div>
+          <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wide">
+            Explore
+          </h4>
+          <ul className="space-y-2 text-sm">
+            <li className="hover:text-orange-500 cursor-pointer">Home</li>
+            <li className="hover:text-orange-500 cursor-pointer">About</li>
+            <li className="hover:text-orange-500 cursor-pointer">Opportunities</li>
+            <li className="hover:text-orange-500 cursor-pointer">Contact</li>
+          </ul>
+        </div>
 
-          {/* CONNECT */}
-          <div>
-            <h4 className="text-white text-sm font-semibold mb-4">
-              Connect
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li className="hover:text-orange-500 transition cursor-pointer">
-                support@thestudentspot.in
-              </li>
-              <li className="hover:text-orange-500 transition cursor-pointer">
+        {/* RESOURCES */}
+        <div>
+          <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wide">
+            Resources
+          </h4>
+          <ul className="space-y-2 text-sm">
+            <li className="hover:text-orange-500 cursor-pointer">
+              Privacy Policy
+            </li>
+            <li className="hover:text-orange-500 cursor-pointer">
+              Terms & Conditions
+            </li>
+            <li className="hover:text-orange-500 cursor-pointer">
+              Community Guidelines
+            </li>
+          </ul>
+        </div>
+
+        {/* CONNECT */}
+        <div>
+          <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wide">
+            Connect
+          </h4>
+
+          <ul className="space-y-3 text-sm">
+            <li className="text-gray-400">
+              support@thestudentspot.in
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/company/thestudentspot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-orange-500 transition"
+              >
                 LinkedIn
-              </li>
-              <li className="hover:text-orange-500 transition cursor-pointer">
-                Instagram
-              </li>
-            </ul>
-          </div>
-        </div>
+              </a>
+            </li>
 
-        {/* ORANGE DIVIDER */}
-        <div className="mt-12 pt-6 border-t border-orange-500/30 text-center text-sm">
-          © {new Date().getFullYear()} The Student Spot. All rights reserved.
+            <li>
+              <a
+                href="https://www.instagram.com/the_studentspot/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-orange-500 transition"
+              >
+                Instagram
+              </a>
+            </li>
+          </ul>
+
+          <button className="mt-6 px-5 py-2 rounded-lg bg-orange-500 text-white text-sm font-semibold hover:bg-orange-600 transition">
+            Contact Us
+          </button>
         </div>
+      </div>
+
+      {/* BOTTOM BAR */}
+      <div className="border-t border-white/10 py-6 text-center text-sm text-gray-400">
+        © 2025 <span className="text-orange-500 font-medium">The Student Spot</span>.  
+        All rights reserved. <br />
+        Made with <span className="text-orange-500">♥</span> in India
       </div>
     </footer>
   );

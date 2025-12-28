@@ -69,9 +69,14 @@ export default function Hero() {
 
           {/* CTA */}
           <div className="mt-10 flex flex-wrap gap-4 items-center">
-            <button className="bg-black text-white px-8 py-3 rounded-xl font-semibold hover:scale-105 transition">
+            <a
+              href="https://www.whatsapp.com/channel/0029Vb6ft6072WTxJ5eMKA2I"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-black text-white px-8 py-3 rounded-xl font-semibold hover:scale-105 transition inline-block"
+            >
               Join The Community
-            </button>
+            </a>
 
             <button className="border border-black px-8 py-3 rounded-xl font-semibold hover:bg-black hover:text-white transition">
               Explore Opportunities
