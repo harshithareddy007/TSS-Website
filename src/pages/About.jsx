@@ -1,104 +1,160 @@
-import { motion } from "framer-motion";
 import Layout from "../layout/Layout";
 
 export default function About() {
   return (
     <Layout>
-      {/* ORIGIN STORY */}
-<section className="max-w-4xl mx-auto px-6 pt-24 pb-32">
-  <p className="text-sm uppercase tracking-widest text-orange-500 font-semibold">
-    Our Story
-  </p>
+      {/* HERO */}
+      <section className="px-6 md:px-20 py-24 bg-[#FAFAFA]">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="uppercase tracking-widest text-xs text-orange-500 font-semibold mb-4">
+              About The Student Spot
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+              Talent is everywhere. <br />
+              <span className="text-gray-900">
+                Opportunities are not.
+              </span>
+            </h1>
+            <p className="mt-6 text-gray-600 text-lg max-w-xl">
+              Students put in effort every day, but clarity is missing — what to
+              learn, where to apply, and what actually moves the needle.
+            </p>
+            <p className="mt-4 text-gray-800 font-medium">
+              We exist to fix that.
+            </p>
+          </div>
 
-  <h1 className="mt-6 text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
-    The Student Spot didn’t start as a startup.
-    <br />
-    It started as a <span className="text-orange-500">frustration.</span>
-  </h1>
+          {/* BELIEF CARD */}
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10">
+            <p className="text-xs uppercase tracking-widest text-gray-400 mb-3">
+              Our belief
+            </p>
+            <h3 className="text-2xl font-semibold mb-6 text-gray-900">
+              From confusion to clarity
+            </h3>
+            <ul className="space-y-4 text-gray-700">
+              <li>• Guidance over noise</li>
+              <li>• Community over chaos</li>
+              <li>• Action over intention</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-  <div className="mt-10 space-y-6 text-lg text-gray-600 leading-relaxed">
-    <p>
-      Students were doing everything they were told to do.
-      Studying hard. Completing courses. Collecting certificates.
-    </p>
-
-    <p>
-      But when it came to real opportunities — internships, guidance, replies —
-      there was silence.
-    </p>
-
-    <p className="font-medium text-gray-800">
-      Effort was real. Outcomes were not.
-    </p>
-
-    <p>
-      The Student Spot was built to fix that gap.
-      Not with noise. Not with motivation quotes.
-      But with systems that actually work.
-    </p>
-  </div>
-</section>
-
-
-      
-
-      {/* SOLUTION */}
-      <section className="max-w-7xl mx-auto px-6 py-28">
-        <h2 className="text-4xl font-bold text-gray-900">
-          So we built something <span className="text-orange-500">different</span>.
+      {/* GAP – SCROLLABLE PREMIUM CARDS */}
+      <section className="px-6 md:px-20 py-24 bg-white">
+        <h2 className="text-3xl font-bold text-gray-900 mb-12">
+          The gap we’re fixing
         </h2>
 
-        <p className="mt-6 max-w-3xl text-gray-600">
-          The Student Spot is an ecosystem where students, mentors, colleges,
-          and companies come together — not for noise, but for real outcomes.
-        </p>
-
-        <div className="mt-16 grid md:grid-cols-3 gap-8">
+        <div className="flex gap-6 overflow-x-auto pb-6 scroll-smooth">
           {[
             {
-              title: "Outcome-first",
-              desc: "Proof of skill matters more than paper validation.",
+              title: "Scattered advice",
+              desc: "Students receive conflicting guidance from multiple platforms with no clear direction."
             },
             {
-              title: "Mentors who respond",
-              desc: "No ghosting. Real humans. Real guidance.",
+              title: "Closed opportunities",
+              desc: "Most real opportunities stay inside closed circles, making access unfair."
             },
             {
-              title: "Community-driven growth",
-              desc: "You grow faster when you grow together.",
+              title: "Directionless skills",
+              desc: "Learning happens, but without knowing how it converts into careers."
             },
+            {
+              title: "Effort without outcomes",
+              desc: "Hard work doesn’t always translate into visible progress or results."
+            }
           ].map((item, i) => (
             <div
               key={i}
-              className="relative bg-white rounded-2xl p-8 shadow-md border border-gray-100"
+              className="min-w-[320px] bg-[#FAFAFA] rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition"
             >
-              <span className="absolute left-0 top-0 h-full w-1 bg-orange-500 rounded-l-2xl" />
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h4 className="text-xl font-semibold mb-3 text-gray-900">
                 {item.title}
-              </h3>
-              <p className="mt-3 text-gray-600">{item.desc}</p>
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA — ONLY HERE */}
-      <section className="bg-gray-900 text-white py-28 text-center">
-        <h2 className="text-4xl font-extrabold">
-          You’re early. <span className="text-orange-500">That’s powerful.</span>
+      {/* JOURNEY – PATH STYLE */}
+      <section className="px-6 md:px-20 py-28 bg-[#FAFAFA]">
+        <h2 className="text-3xl font-bold text-gray-900 mb-20">
+          The journey so far
         </h2>
 
-        <p className="mt-4 text-gray-300">
-          Join a community that’s building careers — together.
-        </p>
+        <div className="relative max-w-5xl mx-auto">
+          <div className="absolute left-4 top-0 h-full w-px bg-gray-300" />
 
-        <a
-          href="https://www.whatsapp.com/channel/0029Vb6ft6072WTxJ5eMKA2I"
-          target="_blank"
-          className="inline-block mt-8 bg-orange-500 px-10 py-4 rounded-xl font-bold hover:bg-orange-600 transition"
-        >
-          Join the Community
-        </a>
+          {[
+            "Started as a simple student-help initiative",
+            "Students began sharing real guidance",
+            "Community expanded across colleges & cities",
+            "Mentors and recruiters joined the ecosystem",
+            "Evolving into a career-first student platform"
+          ].map((step, i) => (
+            <div key={i} className="relative pl-16 mb-16">
+              <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-white border-2 border-orange-500" />
+              <p className="text-lg text-gray-800">{step}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FOUNDER + IMPACT */}
+      <section className="px-6 md:px-20 py-24 bg-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">
+              Built by a student, for students
+            </h2>
+            <p className="font-medium text-gray-900 mb-2">
+              Rajkamal Panthagani
+            </p>
+            <p className="italic text-gray-600 mb-4">
+              Talent isn’t rare. Guidance is.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              The Student Spot was built to help students move from effort to
+              opportunity — without confusion, gatekeeping, or noise.
+            </p>
+          </div>
+
+          <div className="bg-[#FAFAFA] rounded-2xl p-10 border border-gray-100">
+            <ul className="space-y-4 text-gray-700 text-lg">
+              <li>• 10,000+ learners</li>
+              <li>• Pan-India student community</li>
+              <li>• Mentorship & career guidance</li>
+              <li>• Jobs, internships & events</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA – SAME BG, NO BREAK */}
+      <section className="px-6 md:px-20 py-24 bg-white">
+        <div className="max-w-5xl mx-auto bg-[#FAFAFA] rounded-3xl p-16 text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            You’re early. <span className="text-orange-500">That’s powerful.</span>
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-10">
+            Join a community that’s building skills, careers, and clarity
+            together — shaping opportunities, not chasing them.
+          </p>
+          <div className="flex justify-center gap-6">
+            <button className="px-8 py-3 bg-orange-500 text-white rounded-full font-medium hover:bg-orange-600 transition">
+              Join Now
+            </button>
+            <button className="px-8 py-3 border border-gray-300 rounded-full font-medium text-gray-800 hover:bg-gray-100 transition">
+              Contact Us
+            </button>
+          </div>
+        </div>
       </section>
     </Layout>
   );
